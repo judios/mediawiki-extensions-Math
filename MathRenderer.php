@@ -166,14 +166,14 @@ abstract class MathRenderer {
 				$renderer = new MathSource( $tex, $params );
 				break;
 			case 'png':
-				$renderer = new MathTexvc( $tex, $params );
+				$renderer = new MathLatexRender($tex, $params);
 				break;
 			case 'latexml':
 				$renderer = new MathLaTeXML( $tex, $params );
 				break;
 			case 'mathml':
 			default:
-				$renderer = new MathMathML( $tex, $params );
+				$renderer = new MathLatexRender($tex, $params);
 		}
 		LoggerFactory::getInstance( 'Math' )->debug( 'Start rendering $' . $renderer->tex .
 			'$ in mode ' . $mode );
