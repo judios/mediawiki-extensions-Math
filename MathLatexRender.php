@@ -6,6 +6,14 @@
  * @author Julian Diaz
  * Based on the MathTexvc.php devloped by several contributors, and on the work of 
  * Jesse B. Dooley for the MathLatex Extension publisehd at http://mathlatex.sourceforge.net 
+ *
+ * In order to use this render, the following settings are required in LocalSettings.php
+ *
+ * wfLoadExtension( 'Math' );
+ * $wgUseTeX= true;
+ * $wgLatexOnWindows = true;
+ * $wgPdfLaTexCommand = "D:\\texlive\bin\win32\pdflatex.exe";
+ * $wgDvipngCommand = "D:\\texlive\bin\win32\dvipng.exe";
  */
 
 
